@@ -362,12 +362,42 @@
       }
       @media (max-width: 768px) {
         section { padding: 48px 0; }
+        /* cabecera: sin botón de llamada (ya está el botón flotante) */
+        .bar > .btn { display: none; }
+        /* separación visible entre secciones en el móvil */
+        #servicios { border-top: 3px solid var(--black); border-bottom: 3px solid var(--black); }
+        #casa { border-bottom: 3px solid var(--black); }
         .hero-photo img { height: 380px; }
         .services-grid { gap: 14px; margin-top: 30px; }
+        /* tarjetas de servicios: borde negro marcado y filete de color de la casa */
+        .service { border: 2.5px solid var(--black); border-top-width: 6px; }
+        .service:nth-child(1) { border-top-color: var(--red); }
+        .service:nth-child(2) { border-top-color: var(--blue); }
+        .service:nth-child(3) { border-top-color: var(--orange); }
+        .service:nth-child(4) { border-top-color: var(--red); }
+        .price-note { border: 2.5px solid var(--black); }
         .gallery-grid { margin-top: 30px; }
+        /* galería: cada foto como tarjeta con borde completo, pie incluido */
+        .shot {
+          background: var(--paper); border: 2.5px solid var(--black);
+          border-radius: 14px; padding: 10px 10px 12px;
+          box-shadow: var(--shadow-hard-sm);
+        }
+        .shot figcaption { padding: 10px 2px 0; }
+        .chip { border: 2.5px solid var(--black); }
+        /* la casa: emblema y cifras dentro de paneles con borde */
+        .emblem { border: 3.5px solid var(--black); }
+        .stat {
+          border: 2px solid var(--black); border-radius: 12px;
+          background: var(--paper); padding: 12px 14px;
+          box-shadow: 3px 3px 0 var(--black);
+        }
         .visit-grid { margin-top: 30px; }
         .stats { gap: 22px 26px; }
-        .panel { padding: 22px; }
+        /* paneles de horario y dirección: borde claro bien visible sobre el fondo negro */
+        .panel { padding: 22px; border: 2.5px solid #8a8378; }
+        .visit-grid .panel:first-child { border-color: var(--orange); }
+        .visit-grid .panel:last-child { border-color: var(--blue-bright); }
         .lead { font-size: 17px; }
       }
       @media (max-width: 640px) {
